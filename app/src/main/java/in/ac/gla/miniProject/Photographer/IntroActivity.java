@@ -31,7 +31,7 @@ public void onCreate(@Nullable Bundle savedInstanceState) {
     @Override
     public void onDonePressed(Fragment currentFragment) {
         super.onDonePressed(currentFragment);
-        Intent intent = new Intent(IntroActivity.this,Profile.class);
+        Intent intent = new Intent(IntroActivity.this,Login.class);
         startActivity(intent);
 
     }

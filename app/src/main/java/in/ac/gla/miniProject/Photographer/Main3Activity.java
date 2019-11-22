@@ -15,6 +15,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
@@ -79,10 +81,16 @@ public class Main3Activity extends AppCompatActivity {
         btnn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Main3Activity.this,Main2Activity.class);
-                startActivity(intent);
-            }
-        });
+
+
+                        FirebaseAuth.getInstance().signOut();
+                        Intent intent = new Intent(Main3Activity.this, Login.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        startActivity(intent);
+                    }
+                });
+
+
 
 
     }

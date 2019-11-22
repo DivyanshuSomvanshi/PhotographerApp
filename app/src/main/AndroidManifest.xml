@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoadImage"></activity>
+        <activity android:name=".SplashScreen"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".LoadImage" />
         <activity android:name=".Main4Activity" />
         <activity android:name=".Main2Activity" />
         <activity android:name=".CLICK" />
@@ -20,7 +22,7 @@
         <activity android:name=".Login" />
         <activity android:name=".Profile" />
         <activity android:name=".Verify" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".FirstPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
