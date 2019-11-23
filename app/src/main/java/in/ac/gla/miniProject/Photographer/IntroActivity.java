@@ -23,7 +23,7 @@ public void onCreate(@Nullable Bundle savedInstanceState) {
     @Override
     public void onSkipPressed(Fragment currentFragment) {
         super.onSkipPressed(currentFragment);
-        Intent intent = new Intent(IntroActivity.this,Main3Activity.class);
+        Intent intent = new Intent(IntroActivity.this, Login.class);
         startActivity(intent);
 
     }

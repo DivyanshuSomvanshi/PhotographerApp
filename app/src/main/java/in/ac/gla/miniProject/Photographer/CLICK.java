@@ -1,13 +1,13 @@
 package in.ac.gla.miniProject.Photographer;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -50,6 +50,7 @@ public class CLICK extends AppCompatActivity {
                         String img=upload_details.get(position).getImageurl();
                         Intent intent=new Intent(getApplicationContext(),LoadImage.class);
                         intent.putExtra("imageurl",img);
+                        intent.putExtra("flag", "1");
                         startActivity(intent);
 
                     }

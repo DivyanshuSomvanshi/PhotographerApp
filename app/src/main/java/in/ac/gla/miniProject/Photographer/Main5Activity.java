@@ -36,7 +36,7 @@ public class Main5Activity extends AppCompatActivity {
 
         } else {
 
-            Intent intent = new Intent(Main5Activity.this, Main3Activity.class);
+            Intent intent = new Intent(Main5Activity.this, Main2Activity.class);
             startActivity(intent);
 //app open directly
         }

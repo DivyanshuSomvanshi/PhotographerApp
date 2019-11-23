@@ -1,13 +1,13 @@
 package in.ac.gla.miniProject.Photographer;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -22,7 +22,7 @@ public class Main4Activity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private DatabaseReference databaseReference;
-    recyclerAdapter adapter;
+    adapter2 adapter;
 
     private List<upload_details> upload_details=new ArrayList<>();
 
@@ -50,6 +50,7 @@ public class Main4Activity extends AppCompatActivity {
                         String img=upload_details.get(position).getImageurl();
                         Intent intent=new Intent(getApplicationContext(),LoadImage.class);
                         intent.putExtra("imageurl",img);
+                        intent.putExtra("flag", "0");
                         startActivity(intent);
 
                     }
@@ -76,7 +77,7 @@ public class Main4Activity extends AppCompatActivity {
                     upload_details upd= ds.getValue(upload_details.class);
                     upload_details.add(new upload_details(upd.imageurl,upd.title,upd.description,upd.key));
 
-                    adapter=new recyclerAdapter(upload_details);
+                    adapter = new adapter2(upload_details);
                     recyclerView.setAdapter(adapter);
                     adapter.notifyDataSetChanged();
 
